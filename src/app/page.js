@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header';
 import UserPage from './UserPage';
 
 // Server-side function to fetch data
@@ -12,7 +13,8 @@ export default async function Page() {
   const users = await fetchUsers();
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
+    <main className=" min-h-screen bg-gradient-to-b from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800">
+      <Header/>
       <UserPage initialUsers={users} />
     </main>
   );

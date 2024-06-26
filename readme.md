@@ -1,45 +1,36 @@
-## Stonks Frontend Assignment
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-#### `Only use Next.js/React library; Tailwind CSS is accepted for styling.`
+## Getting Started
 
-Your code must be clean and custom hooks are nice to have.
+First, run the development server:
 
-#### Data table: [Tanstack Table and Shadcn is accepted]
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Create a CRUD that is SSR. You will use this endpoint to fetch data: `https://665621609f970b3b36c4625e.mockapi.io/users`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Documentation for filters, pagination, and limit is here https://github.com/mockapi-io/docs/wiki
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-- Users can navigate from page 1 to 5.
-- Users can search by email/username.
-- Rewrite the current URL with the current page and filters. Multiple filters can be applied.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### Chat
+## Learn More
 
-A simple message list of users. If someone tags you, a light background should be added to the message. If the message contains `:emoji:`, it should be replaced by the correct image.
+To learn more about Next.js, take a look at the following resources:
 
-#### [CHAT] Emojis
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-In the message input, if the user starts writing an `:emoji:`, a popup/tooltip or panel of emojis will appear, and the user can choose one using the keyboard and mouse.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-#### [CHAT] Tag a user
+## Deploy on Vercel
 
-In the message input, if the user starts writing `@`, a list of at least 3 users will appear.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Add filter logic so that if the user wants to tag `@edeuxk` and writes `@edxk`, the module should be smart enough to retrieve `@edeuxk`.
-
-#### [CHAT] Commands
-
-In the message input, if the user starts writing `/`, we should provide a list of actions. For now, we will only support the following actions:
-
-- /mute @user
-- /ban @user
-- /title set a title for the current stream
-- /description set a description for the current stream
-
-### Bonus
-
-`Modal` needs to fit on every screen size, including resizing and scrolling inside. If the user presses escape, it needs to close the modal.
-
-
-`Profile picture upload/edit` Select a picture from the disk file, resize and upload the selected area. Compression is required, and the image should be less than 550kb. The user does not have to be restricted; it will be compressed by the computer and saved as a PNG. The user can select SVG/PNG/JPEG. Note that iOS stores images as .heic, so be aware of that - [3rd party library accepted].
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

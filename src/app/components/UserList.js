@@ -4,9 +4,9 @@ import React from 'react';
 
 const UserList = ({ users, handleEdit, handleDelete }) => {
   return (
-    <div className="w-full max-w-lg p-4 bg-white shadow-md rounded-lg">
+    <div style={{backgroundColor: '0B0E37'}} className="w-full max-w-lg p-4 bg-white shadow-md">
       {users.map((user) => (
-        <div key={user.id} className="flex justify-between p-2 mb-2 border-b">
+        <div key={user.id} style={{backgroundColor: '0B0E37'}} className="flex justify-between p-2 mb-2 border-b">
           <div className="flex items-center">
             <img src={user.avatar} alt={user.username} className="w-10 h-10 rounded-full mr-4" />
             <div>
