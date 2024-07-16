@@ -1,16 +1,15 @@
-'use client'; // Add this line to mark the component as a Client Component
+'use client'; 
 
 import React, { useState } from 'react';
 import Image from 'next/image';
 import UserList from './components/UserList';
 import UserForm from './components/UserForm';
+import Sidebar from './components/Sidebar';
+import ChatBox from './components/ChatBox';
 
 export default function UserPage({ initialUsers }) {
   const [users, setUsers] = useState(initialUsers);
   const [currentUser, setCurrentUser] = useState(null);
-
-  console.log(users)
-
 
   const handleFormSubmit = async (user) => {
     if (user.id) {
@@ -47,9 +46,13 @@ export default function UserPage({ initialUsers }) {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
-      <UserForm currentUser={currentUser} handleFormSubmit={handleFormSubmit} />
-      <UserList users={users} handleEdit={handleEdit} handleDelete={handleDelete} />
+    <div style={{backgroundColor: '#393a52'}} className="flex flex-col min-h-screen ">
+      <div className='flex'>
+
+      <Sidebar users={users} handleDelete={handleDelete} handleEdit={handleEdit} />
+      <ChatBox />
+      {/* <UserList users={users} handleEdit={handleEdit} handleDelete={handleDelete} /> */}
+      </div>
       <footer className="mt-8 text-center">
         <a
           className="flex items-center justify-center gap-2 p-8 text-gray-700 dark:text-gray-300"

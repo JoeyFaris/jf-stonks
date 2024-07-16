@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header style={{ backgroundColor: '#080A28' }} className="p-2 text-white shadow-lg">
+    <header style={{ backgroundColor: '#080A28' }} className="p-2 text-white shadow-lg z-50">
       <div className="container mx-auto flex space-x-4">
         <Image
           src="/stonks.jpg"
